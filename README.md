@@ -1,28 +1,91 @@
-![howfm-weblogo_whitespace](https://user-images.githubusercontent.com/1236319/223379116-01e04545-4d4a-4296-8e1e-c155ea2ed1f8.svg)
 
-# Welcome to your how.fm coding challenge :wave:
+## Getting Started
 
-This project was originally bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Refer to the original README `ReactAppREADME.md` to find out how to run the project using [yarn](https://yarnpkg.com/) scripts.
+And enhanced with [Storybook](https://storybook.js.org/).
 
-Have fun and good luck :dizzy:
+## Storybook scripts
 
-## Your steps today
+#### `yarn storybook`
 
-1. Keep your _Reviewly_ countdown and submit page open.
-   - You can find the link by clicking the _**`[Accept the invite]`**_ button in the _Reviewly_ invitation mail again.
-2. Locate today's tasks:
-   - Begin by reviewing the **open pull request** for an overview.
-   - Each task is also listed as **open GitHub issue**.
-   - For convenience, tasks are marked with **in-line comments**: `--- [TASK] ---`
-3. Checkout the `feature`-branch (⚠ not `main`).
-   - ⚠ We found out that tools like _GitHub Desktop_, _Kraken_ and similar might not work (due to GitHub Enterprise).
-   - We recommend using _**`git-CLI`**_.
-4. Make code changes and test them in the appplication and the storybook.
-   - Run `yarn start` and `yarn storybook`.
-   - Storybook is there for your convenience, allowing you to test components in isolation.
-6. Constantly commit and push your changes.
-   - Use your preferred IDE.
-7. When finished, submit your results on your _Reviewly_ page.
-   - Otherwise, Reviewly will automatically submit the pushed state.
+Runs the Storybook in the development mode.\
+Open [http://localhost:6006/](http://localhost:6006/) to view it in your browser.
+
+The page will reload when you make changes.\
+
+#### `yarn build-storybook`
+
+Builds the Storybook for production and deplyment.
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+
+## Default Scripts
+
+In the project directory, you can run:
+
+#### `yarn start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+#### `yarn test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+#### `yarn build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## ⚠️ Dangerous scripts
+
+#### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
