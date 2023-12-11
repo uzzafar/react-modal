@@ -1,0 +1,12 @@
+.country-option {
+    display: flex;
+    align-items: center;
+  }
+  
+  .flag-icon {
+    width: 20px;
+    height: 15px;
+    margin-right: 8px;
+    border-radius: 2px;
+  }
+  

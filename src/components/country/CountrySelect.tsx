@@ -1,6 +1,7 @@
 import countries from "i18n-iso-countries";
-import Select from "react-select";
+import Select, { components, OptionProps } from "react-select";
 import { CountrySelectOption } from "./CountrySelectOption";
+import "./CountrySelect.css"; // Import the CSS file
 
 // Register countries
 countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
@@ -8,14 +9,18 @@ countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 // --- TASK G ---
 // Please replace "any" with a proper type in this file (and where it is needed).
 
-// Props
+export interface Country {
+  code: string;
+  name: string;
+}
+
 interface CountrySelectProps {
-  value?: any;
-  onChange?: (value: any) => void;
+  value?: Country;
+  onChange?: (value: Country) => void;
 }
 
 // Constants
-export const DEFAULT_COUNTRY = {
+export const DEFAULT_COUNTRY: Country = {
   code: "US",
   name: "United States of America",
 };
@@ -31,12 +36,33 @@ export const CountrySelect = ({
   ).map(([code, name]) => {
     return {
       value: { code, name },
-      label: name,
+      label: (
+        <div className="country-option">
+          <img
+            className="flag-icon"
+            src={`https://catamphetamine.gitlab.io/country-flag-icons/3x2/${code}.svg`}
+            alt={name}
+          />
+          {name}
+        </div>
+      ),
     };
   });
-  const defaultValue = { value: value, label: value.name };
-
   // Render
+  const defaultValue = {
+    value: value,
+    label: (
+      <div className="country-option">
+        <img
+          className="flag-icon"
+          src={`https://catamphetamine.gitlab.io/country-flag-icons/3x2/${value.code}.svg`}
+          alt={value.name}
+        />
+        {value.name}
+      </div>
+    ),
+  };
+
   return (
     <div>
       <label>
@@ -46,8 +72,9 @@ export const CountrySelect = ({
           components={{ Option: CountrySelectOption }}
           defaultValue={defaultValue}
           onChange={(newValue) => {
-            onChange(newValue.value);
+            onChange && onChange(newValue.value);
           }}
+          isSearchable
         />
       </label>
     </div>

@@ -12,7 +12,7 @@ export default {
 } as Meta;
 
 // Main Story
-const Template: StoryFn<any> = (args) => <LanguageSelect {...args} />;
+const Template: StoryFn<{}> = (args) => <LanguageSelect {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};
